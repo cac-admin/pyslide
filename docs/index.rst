@@ -15,6 +15,15 @@ The documentation for `pyslide <https://github.com/PingjunChen/pyslide>`_ is mai
   contour
   patch
   pyramid
+  remote
+
+.. _protocol-docs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Remote protocol
+
+   remote_protocol
 
 .. _about-docs:
 

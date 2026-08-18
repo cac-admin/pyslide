@@ -10,6 +10,7 @@ def configuration(parent_package='', top_path=None):
     config.add_subpackage('contour')
     config.add_subpackage('patch')
     config.add_subpackage('pyramid')
+    config.add_subpackage('remote')
 
     return config
 

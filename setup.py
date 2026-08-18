@@ -36,6 +36,16 @@ args = dict(
     author_email=AUTHOR_EMAIL,
     packages=find_packages(),
     install_requires=REQS,
+    extras_require={
+        # Remote annotation is opt-in: it only needs an HTTP client, so it
+        # stays out of the base install.
+        "remote": ["requests>=2.25.0", "tqdm>=4.60.0"],
+    },
+    entry_points={
+        "console_scripts": [
+            "pyslide-remote=pyslide.remote.cli:main",
+        ],
+    },
     classifiers= CLASSIFIERS,
 )
 

@@ -25,6 +25,18 @@ pip install pyslide==0.5.0
 Usage
 ------------
 
+Remote annotation
+------------
+Install the optional extra, then send a slide to a compatible server:
+```alpha
+pip install "pyslide[remote]"
+pyslide-remote init          # or: init --from <pyslide-remote.json>
+pyslide-remote annotate slide.tif
+```
+`.vsi` slides are zipped with their companion folder (`_slide_/` or `slide_/`) before upload. Uploads wait up to two hours for the server response; pass `--timeout` to change that. Self-signed local TLS: `init --no-verify`.
+
+CLI commands: `init`, `profiles`, `use`, `login`, `logout`, `doctor`, `annotate`, `status`. Python API: [remote](docs/remote.rst). Server implementers: [remote annotation protocol](docs/remote_protocol.rst).
+
 Documentation
 ------------
 Hosted in [https://pyslide.readthedocs.io](https://pyslide.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and [Sphinx](http://www.sphinx-doc.org).
